@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  
+      <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MWSZRD8');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"c4a0291bd4",applicationID:"128427580"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
+  />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <link rel="canonical" href="https://aimementoring.com" />
+  <link rel="alternate" href="https://aimementoring.com" hreflang="x-default" />
+      
+        
+  <title>Be an AIME Friend</title>
+
+              
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <script defer src="dist/commons.js"></script>
+  <script defer src='dist/app.js'
+          data-id="shopify"
+          data-domain="aimementoring.myshopify.com"
+          data-token="560dd7f8110349a17d6e96c46d02a0ce"
+          data-cdn-url="https://d2ylaz7bdw65jx.cloudfront.net">
+  </script>
+  <link rel="stylesheet" type="text/css" href="dist/styles.bundle.css">
+  <link rel="stylesheet" type="text/css" href="dist/sass.bundle.css">
+  <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqtlVs2xsfc8s8BgH4g_T2OqN6_xLxWcg&amp;libraries=places&amp;callback=initAutocomplete"></script>
+</head>
+
+<body>
+      <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWSZRD8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="cart"></div>
+  
+<div id="raiselyModal" class="raisely-modal">
+  <div class="raisely-iframe">
+    <i class="closeRaiselyModal material-icons raisely-iframe--desktop-close">close</i>
+    <iframe src='https://aimedonations.raisely.com/embed/' width='480' height='512'>
+</iframe>
+    <span class="closeRaiselyModal raisely-iframe--mobile-close">No, thanks</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="bg-white">
+  <div class="container clearfix p3 flex items-center">
+    <!-- logo/region -->
+    <div class="sm-col align-middle flex">
+      <a class="flex" href="https://aimementoring.com/">
+        <img src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/aime-logo.svg">
+      </a>
+      <div class="dropdown-selector flex items-baseline ml2 xs-hide sm-hide md-hide">
+        <li class="inline-block relative header-link--with-submenu">
+        <span class="nav-btn px1" style="top: 5px; cursor: pointer;">GLOBAL</span>
+          <div class="submenu-wrapper">
+            <div class="submenu-arrow"></div>
+            <div class="flex flex-column pt3 px3" style="padding-bottom:1.5rem;">
+              <h3 class="regular f-14 c-black mb1">Select your region</h3>
+              <p class="f-14 mb1 c-grey">Mentors for a fairer world.</p>
+              <ul class="list-reset mt2">
+                                  <li class="mb1">
+                    <a class="f-15 c-black flex items-center" href="https://aimementoring.com/au/be-a-friend">
+                      <img class="icon-flag" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/flags/australia.png">
+                      Australia
+                    </a>
+                  </li>
+                                  <li class="mb1">
+                    <a class="f-15 c-black flex items-center" href="https://aimementoring.com/be-a-friend">
+                      <img class="icon-flag" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/flags/global.png">
+                      Global
+                    </a>
+                  </li>
+                                  <li class="mb1">
+                    <a class="f-15 c-black flex items-center" href="https://aimementoring.com/za/be-a-friend">
+                      <img class="icon-flag" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/flags/south-africa.png">
+                      South Africa
+                    </a>
+                  </li>
+                                  <li class="mb1">
+                    <a class="f-15 c-black flex items-center" href="https://aimementoring.com/ug/be-a-friend">
+                      <img class="icon-flag" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/flags/uganda.png">
+                      Uganda
+                    </a>
+                  </li>
+                              </ul>
+            </div>
+          </div>
+        </li>
+      </div>
+    </div>
+  <!-- Header Links -->
+  <nav id="nav" class="menu-links sm-col-right ml-auto">
+    <ul class="list-reset">
+      <li class="inline-block relative header-link--with-submenu">
+        <span class="nav-btn">About</span>
+        <div class="submenu-wrapper">
+          <div class="submenu-arrow"></div>
+          <div class="flex flex-column pt3 px3" style="padding-bottom:1.5rem;">
+            <h3 class="light f-18" style="margin-bottom: .25rem">About AIME</h3>
+            <p class="f-14 mb1 c-grey">Who we are and why we do what we do.</p>
+            <ul class="list-reset mt2">
+              <li class="mb2"><a href="https://aimementoring.com/about" class="c-brand-primary f-14">What is AIME</a></li>
+              <li class="mb2"><a href="https://aimementoring.com/jack-manning-bancroft" class="c-brand-primary f-14">Founder &amp; CEO</a></li>
+              <li class="mb2"><a href="https://aimementoring.com/history" class="c-brand-primary f-14">History</a></li>
+              <li class="mb2"><a href="https://aimementoring.com/endorsements" class="c-brand-primary f-14">Endorsements</a></li>
+              <li><a href="https://aimementoring.com/faq" class="c-brand-primary f-14">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="flex flex-column pt3 px3 bg-light-blue" style="padding-bottom:1.5rem;">
+            <h3 class="regular f-15 c-brand-primary">A deeper insight.</h3>
+            <ul class="flex list-reset mt2">
+              <li class="inline-block mr3 mb1"><a href="https://aimementoring.com/impact" class="c-brand-primary f-14">Impact</a></li>
+              <li class="inline-block mr3 mb1"><a href="https://aimementoring.com/reports" class="c-brand-primary f-14">Reports</a></li>
+              <li class="inline-block mr3 mb1"><a href="https://aimementoring.com/case-studies" class="c-brand-primary f-14">Case Studies</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="inline-block relative">
+        <a class="nav-btn" href="https://aimementoring.com/stories">Sunday Kindness</a>
+      </li>
+      <li class="inline-block relative">
+        <a class="nav-btn" href="https://aimementoring.com/be-a-mentor">Mentor</a>
+      </li>
+      <li class="inline-block relative">
+        <a class="nav-btn" href="https://aimementoring.com/partner">Partner</a>
+      </li>
+      <li class="inline-block">
+        <a class="nav-btn" href="https://aimementoring.com/contact">Contact</a>
+      </li>
+      <li class="inline-block">
+        <a class="nav-btn" href="https://aimementoring.com/positions">Jobs</a>
+      </li>
+      <li class="inline-block">
+        <a class="shop-nav-btn" target="_blank" href="https://shop.aimementoring.com/">Shop</a>
+      </li>
+      <li class="inline-block">
+        <a class="toggleRaiselyModal donate-nav-btn" href='javascript:;'>Donate</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="sm-col-right ml-auto flex mobile-menu">
+    <i id="mobileMenu" class="material-icons cursor">menu</i>
+  </div>
+
+  <nav id="mobileHeader" class="mobile-header">
+    <div class="flex justify-between items-center pt2 px3 pb0 border-bottom b-light-blue" style="flex-direction: column;
+    align-items: flex-start;">
+      <div class="flex flex-column items-start">
+        <div class="flex items-center">
+
+          <img class="icon-flag" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/flags/global.png">
+          <span class="feature-font-family f-12 uppercase lh-smaller">GLOBAL</span>
+          <span class="feature-font-family f-12 uppercase lh-smaller c-light-grey bold mx2">/</span>
+          <span id="mobileRegionToggle" class="feature-font-family f-12 uppercase lh-smaller c-yellow bold" style="letter-spacing: 1px">Change</span>
+        </div>
+        <div id="mobileRegionWrapper" class="flex flex-column mobile-region--wrapper mt2">
+                                    <div class="flex items-center my2">
+                <img class="icon-flag" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/flags/australia.png">
+                  <a class="feature-font-family f-12 uppercase text-decoration-none c-black lh-smaller" href="https://aimementoring.com/au/be-a-friend">Australia</a>
+              </div>
+                          <div class="flex items-center my2">
+                <img class="icon-flag" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/flags/global.png">
+                  <a class="feature-font-family f-12 uppercase text-decoration-none c-black lh-smaller" href="https://aimementoring.com/be-a-friend">Global</a>
+              </div>
+                          <div class="flex items-center my2">
+                <img class="icon-flag" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/flags/south-africa.png">
+                  <a class="feature-font-family f-12 uppercase text-decoration-none c-black lh-smaller" href="https://aimementoring.com/za/be-a-friend">South Africa</a>
+              </div>
+                          <div class="flex items-center my2">
+                <img class="icon-flag" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/flags/uganda.png">
+                  <a class="feature-font-family f-12 uppercase text-decoration-none c-black lh-smaller" href="https://aimementoring.com/ug/be-a-friend">Uganda</a>
+              </div>
+                              </div>
+      </div>
+      <i id="mobileMenuClose" class="material-icons c-black cursor">close</i>
+    </div>
+    <ul class="overflow-scroll list-reset pl3 pb3 pt2 flex flex-column items-start flex-auto">
+      <div>
+        <li class="py2"><a class="text-decoration-none f-18 feature-font-family c-black" href="https://aimementoring.com/" >Home</a></li>
+        <li class="py2">
+          <label for="mobile-about-toggle" class="flex items-center">
+            <span class="f-18 feature-font-family c-black mr1">About</span><i class="material-icons c-yellow">add</i>
+          </label>
+          <input type="checkbox" id="mobile-about-toggle" class="mobile-about--checkbox hide">
+          <div class="flex flex-column pl3 mobile-about--list-wrapper">
+            <ul class="list-reset pt1">
+              <li class="my3"><a href="https://aimementoring.com/about" class="c-grey regular feature-font-family text-decoration-none f-15">What is AIME</a></li>
+              <li class="mb3"><a href="https://aimementoring.com/jack-manning-bancroft" class="c-grey regular feature-font-family text-decoration-none f-15">Founder &amp; CEO</a></li>
+              <li class="mb3"><a href="https://aimementoring.com/history" class="c-grey regular feature-font-family text-decoration-none f-15">History</a></li>
+              <li class="mb3"><a href="https://aimementoring.com/endorsements" class="c-grey regular feature-font-family text-decoration-none f-15">Endorsements</a></li>
+              <li class="mb3"><a href="https://aimementoring.com/faq" class="c-grey regular feature-font-family text-decoration-none f-15">FAQs</a></li>
+              <li class="mb3"><a href="https://aimementoring.com/impact" class="c-grey regular feature-font-family text-decoration-none f-15">Impact</a></li>
+              <li class="mb3"><a href="https://aimementoring.com/reports" class="c-grey regular feature-font-family text-decoration-none f-15">Reports</a></li>
+              <li class="mb3"><a href="https://aimementoring.com/case-studies" class="c-grey regular feature-font-family text-decoration-none f-15">Case Studies</a></li>
+            </ul>
+          </div>
+        </li>
+      </div>
+      <li class="py2"><a class="text-decoration-none f-18 feature-font-family c-black" href="https://aimementoring.com/stories" >Sunday Kindness</a></li>
+      <li class="py2"><a class="text-decoration-none f-18 feature-font-family c-black" href="https://aimementoring.com/be-a-mentor" >Mentor</a></li>
+      <li class="py2"><a class="text-decoration-none f-18 feature-font-family c-black" href="https://aimementoring.com/partner" >Partner</a></li>
+      <li class="py2"><a class="text-decoration-none f-18 feature-font-family c-black" href="https://aimementoring.com/contact" >Contact</a></li>
+      <li class="py2"><a class="text-decoration-none f-18 feature-font-family c-black" target="_blank" href="https://shop.aimementoring.com/" >Shop</a></li>
+      <li class="py2"><a class="text-decoration-none f-18 feature-font-family c-black toggleRaiselyModal" href="javascript:;">Donate</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+
+<div class="footer-extender clearfix">
+  <!-- body area -->
+  <div class="matrix-general">
+        <div class="banner" style="background-image:url('https://d2ylaz7bdw65jx.cloudfront.net/resources/26146875839_a181cb51d0_b.jpg'); background-position:0% 47%"></div>
+
+            <div class="wrap-md mb0 md-mb3 lg-mb3 clearfix">
+                  <span class="line above"></span>
+                <h1 class="above center c-black w100">Be an AIME Friend</h1>
+        <p class="destroy-p subtitle-basic center mx-auto">Get set for an astronomical year, with marginalised kids and University students rising together to tackling inequality globally. We’ve got book releases, inspiring emails heading to your inbox, new episodes of AIME TV, jobs on across the globe, fresh AIME Apparel designs, and we&#039;ll do it all while staying positive and focused on being mentors for a fairer world.</p>
+        <script>
+          var p = document.querySelector('.destroy-p');
+          if (!p.innerText) p.remove();
+        </script>
+      </div>
+
+
+    <!-- H2 -->
+    
+</div>
+  <div class="matrix-form">
+  <div class="form-wrap mx-auto px3">
+    <form accept-charset="UTF-8" action="https://formkeep.com/f/0f2fe2a1cd09" method="POST" class="clearfix">
+      <input type="hidden" name="utf8" value="✓">
+      <input type="hidden" name="submissionmessage" value="contact">
+                                      <div class="sm-col o7-r o7-b sm-col-6 md-col-6">
+                <input type="text" class="input" placeholder="First Name" name="first_name" required>
+              </div>
+
+                                            <div class="sm-col o7-r o7-b sm-col-6 md-col-6">
+                <input type="text" class="input" placeholder="Last Name" name="last_name" required>
+              </div>
+
+                                            <div class="sm-col o7-r o7-b sm-col-6 md-col-6">
+                <input type="email" class="input" placeholder="Email" name="email" required>
+              </div>
+
+                                            <div class="sm-col o7-r o7-b js-phone-component sm-col-6 md-col-6" data-full-input-name="full_phone"  data-current-site="GLOBAL">
+              <input type="tel" class="input" placeholder="0402 824 124" name="phone" required>
+            </div>
+
+                                            <div class="sm-col o7-r o7-b sm-col-6 md-col-6 select">
+                <select placeholder="What country do you live in?" name="country-name" class='js-country-select' required>
+  <option value="" disabled="" selected="">
+          What country do you live in?
+      </option>
+</select>
+
+              </div>
+
+                                            <div class="sm-col o7-r o7-b sm-col-6 md-col-6">
+                <input type="text" class="input" placeholder="City/Town" name="location" required>
+              </div>
+
+                                            <div class="sm-col sm-col-12 md-col-12 center-align md-left-align py2 my3">
+                <input type="submit" class="submit center bg-blue" value="Let&#039;s talk" >
+              </div>
+
+                              </form>
+  </div>
+</div>
+            <!-- end body area -->
+</div>
+
+
+<!-- Footer Links Section -->
+<div class="footer-links fit relative pt4 mb2 pb2 lg-mb4 lg-pb4 border-top b-light-blue">
+  <div class="flex mx-auto wrap px3 mt4">
+    <div class="w100 flex justify-between flex-column lg-flex-row">
+      <div class="flex flex-auto flex-wrap">
+        <nav class="flex-auto mb3 footer-links--column">
+          <h4 class="c-brand-primary feature-font-family regular f-15 pb2">Pitch In</h4>
+          <ul class="list-reset f-14">
+            <li class="mb2"><a href="https://aimementoring.com/be-a-mentor" class="c-black text-decoration-none">Become a <strong>Mentor</strong></a></li>
+            <li class="mb2"><a href="https://aimementoring.com/partner" class="c-black text-decoration-none">Become a <strong>Partner</strong></a></li>
+            <li class="mb2"><a href="javascript:;" class="toggleRaiselyModal c-black text-decoration-none">Make a Donation</a></li>
+            <li class="mb2"><a href="https://aimementoring.com/faq#donate" class="c-black text-decoration-none">Investment Opportunities</a></li>
+          </ul>
+        </nav>
+        <nav class="flex-auto mb3 footer-links--column">
+          <h4 class="c-brand-primary feature-font-family regular f-15 pb2">What Else?</h4>
+          <ul class="list-reset f-14">
+            <li class="mb2"><a target="_blank" href="https://shop.aimementoring.com/" class="c-black text-decoration-none">Shop Apparel</a></li>
+            <li class="mb2"><a href="https://aimementoring.com/the-mentor" class="c-black text-decoration-none">Read the book</a></li>
+            <li class="mb2"><a href="https://aimementoring.com/about" class="c-black text-decoration-none">About AIME</li>
+            <li class="mb2"><a href="https://aimementoring.com/jack-manning-bancroft" class="c-black text-decoration-none">Founder &amp; CEO</a></li>
+          </ul>
+        </nav>
+        <nav class="flex-auto mb3 footer-links--column">
+          <h4 class="c-brand-primary feature-font-family regular f-15 pb2">Go Further</h4>
+          <ul class="list-reset f-14">
+            <li class="mb2"><a href="https://aimementoring.com/positions" class="c-black text-decoration-none hiring-badge"><span>Work with AIME</span></a></li>
+            <li class="mb2"><a href="https://aimementoring.com/golden-tickets" class="c-black text-decoration-none">AIME in your country</a></li>
+            <li class="mb2"><a href="https://aimementoring.com/faq" class="c-black text-decoration-none">FAQs</a></li>
+            <li class="mb2"><a href="https://aimementoring.com/contact" class="c-black text-decoration-none">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="flex flex-auto justify-start lg-justify-end">
+        <div class="flex flex-column w100" style="max-width: 350px">
+          <div class="flex-auto mb3">
+            <h4 class="c-brand-primary feature-font-family regular f-15 pb2">Become an AIME friend</h4>
+            <p class="f-14 pb2">Subscribe to our newsletter</p>
+            <form accept-charset="UTF-8" action="https://formkeep.com/f/0f2fe2a1cd09" method="POST" class="footer-links--input">
+              <input type="hidden" name="utf8" value="✓">
+              <input type="hidden" name="submissionmessage" value="footernewslettersubscription">
+              <input id="subscribe" class="input p2 f-16 light w100" type="email" placeholder="Enter your email" name="email">
+              <button class="footer-links--input-button bg-yellow"></button>
+            </form>
+          </div>
+          <div class="flex flex-auto mt2 lg-mt0">
+            <div class="flex flex-column">
+              <h4 class="c-brand-primary feature-font-family regular f-15 pb2">Find us</h4>
+              <div class="flex">
+                <a target="_blank" href="https://instagram.com/aimementoring" class="mr3">
+                  <img height="20px" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/instagram-icon.svg">
+                </a>
+                <a target="_blank" href="https://facebook.com/aimementoring" class="mr3">
+                  <img height="20px" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/facebook-icon.svg">
+                </a>
+                <a target="_blank" href="https://youtube.com/aimementoring" class="mr3">
+                  <img height="20px" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/youtube-icon.svg">
+                </a>
+                <a target="_blank" href="https://linkedin.com/company/aime" class="mr3">
+                  <img height="20px" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/linkedin-icon.svg">
+                </a>
+                <a target="_blank" href="https://twitter.com/aimementoring" class="">
+                  <img height="20px" src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/twitter-icon.svg">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Copyright Section -->
+<footer class="bg-light-blue">
+  <div class="px3 py3 lg-py1">
+    <div class="container lg-px0 pt1 lg-pt0 flex flex-column lg-flex-row justify-between f-12">
+      <span class="footer-text mb2">2020 © AIME</span>
+      <div class="">
+        <ul class="list-reset flex flex-column lg-flex-row">
+          <li class="flex"><a class="footer-text mr3" href="https://aimementoring.com/terms-of-service">Terms of Service</a></li>
+          <li class="flex footer-text mr3">ABN 31 081 797 652</li>
+          <li class="flex footer-text">ICN 7040</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  <div id="video-overlay"></div>
+  <div id="shop-overlay"></div>
+
+
+  <!-- Ghost Message Desktop -->
+  <div class="ghost-hint flex items-center">
+    <img src="https://d2ylaz7bdw65jx.cloudfront.net/assets/images/ghost.svg">
+    <div class="message">
+      <p>AIME Fam, wanna help the African Australian community? Due to your wonderful generosity we've raised $55k! Help us reach $60k and fund Bem and this program for the first year. <a href="http://aimeforafricanaustraliankids.raisely.com/" class="c-black" target="_blank" rel="noreferrer noopener">Find out more and donate here.</a></p>
+      <p class="close-message material-icons-font">close</p>
+    </div>
+  </div>
+
+  <!-- Ghost Message on Mobile -->
+  <div class="ghost-message-banner display-none">
+    <p>AIME Fam, wanna help the African Australian community? Due to your wonderful generosity we've raised $55k! Help us reach $60k and fund Bem and this program for the first year. <a href="http://aimeforafricanaustraliankids.raisely.com/" class="c-black" target="_blank" rel="noreferrer noopener">Find out more and donate here.</a></p>
+    <p class="close-banner material-icons-font">close</p>
+  </div>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"c4a0291bd4","applicationID":"128427580","transactionName":"ZVZXMRNWC0VSUU0NX1wcYBcIGAxYV1dBSkBaQw==","queueTime":6,"applicationTime":1110,"atts":"SRFUR1tMGEs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Clipping path for wobble shapes throughout the site -->
+<svg height="0" width="0" class="absolute">
+  <defs>
+    <clipPath id="svgWobblePath">
+      <path fill="#FFFFFF" stroke="#000000" stroke-width="1.5794" stroke-miterlimit="10" d="M294.121181,148.902549 C294.086967,197.0596 276.639021,234.589224 236.323211,256.768474 C204.430439,274.314689 169.662075,285.33806 132.072555,280.90852 C109.011842,278.188959 87.937138,270.241658 68.710028,257.188081 C42.2014066,239.192286 22.8498795,215.03962 9.68343833,185.716002 C-6.13619789,150.481598 -1.24971569,116.535989 14.7892057,82.6077318 C35.9992134,37.7381323 70.6944813,10.8501304 118.392893,2.4816441 C151.504953,-3.32818346 184.293528,0.591833235 213.363587,19.262786 C230.110131,30.0179867 246.138166,42.3175321 260.940692,55.6881806 C280.791443,73.6192989 288.701261,98.1474038 292.107179,124.223008 C293.258038,133.042651 293.575301,141.974295 294.121181,148.902549"/>
+    </clipPath>
+  </defs>
+</svg>
+</html>
